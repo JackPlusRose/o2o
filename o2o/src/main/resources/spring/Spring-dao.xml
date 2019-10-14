@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.imooc.o2o">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+    </context:component-scan>
+
+    <!--读取jdbc配置信息-->
+    <context:property-placeholder location="classpath:Jdbc.properties"></context:property-placeholder>
+
+    <!--配置连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+
+        <!--最大连接数-->
+        <property name="maxPoolSize" value="30"></property>
+        <!--最小连接数-->
+        <property name="minPoolSize" value="10"></property>
+        <!--//        关闭连接后不自动commit-->
+        <property name="autoCommitOnClose" value="false"></property>
+        <!--//        设置超时间-->
+        <property name="checkoutTimeout" value="10000"></property>
+        <!--//        设置连接失败重试次数-->
+        <property name="acquireRetryAttempts" value="2"></property>
+    </bean>
+
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.imooc.o2o.dao"></property>
+    </bean>
+</beans>

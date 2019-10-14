@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:43:58 +0800] "GET /o2o/shopadmin/shopList HTTP/1.1" 200 2203 http-bio-8888-exec-1 177
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:43:58 +0800] "GET /o2o/shopadmin/shopList HTTP/1.1" 304 - http-bio-8888-exec-2 181
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:44:00 +0800] "GET /o2o/shopAdmin/getShopList HTTP/1.1" 200 5794 http-bio-8888-exec-5 1850
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:29 +0800] "GET /o2o/shopadmin/shopList HTTP/1.1" 304 - http-bio-8888-exec-7 12
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:29 +0800] "GET /o2o/shopAdmin/getShopList HTTP/1.1" 200 5794 http-bio-8888-exec-9 90
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:40 +0800] "GET /o2o/shopAdmin/getShopManagementInfo?shopId=20 HTTP/1.1" 200 29 http-bio-8888-exec-10 16
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:42 +0800] "GET /o2o/resources/css/shop/productcategorymanage.css HTTP/1.1" 404 949 http-bio-8888-exec-10 13
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:42 +0800] "GET /o2o/shopAdmin/getProductCategoryList HTTP/1.1" 200 57 http-bio-8888-exec-10 5
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:51 +0800] "GET /o2o/shopAdmin/getShopManagementInfo?shopId=17 HTTP/1.1" 200 29 http-bio-8888-exec-10 4
+0:0:0:0:0:0:0:1 - - [13/Oct/2019:22:45:52 +0800] "GET /o2o/shopAdmin/getShopManagementInfo?shopId=17 HTTP/1.1" 200 29 http-bio-8888-exec-10 3
