@@ -15,7 +15,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <spring.version>5.0.2.RELEASE</spring.version>
+      <spring.version>5.2.3.RELEASE</spring.version>
       <slf4j.version>1.6.6</slf4j.version>
       <log4j.version>1.2.12</log4j.version>
       <shiro.version>1.2.3</shiro.version>
@@ -246,7 +246,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.0.2.RELEASE</version>
+            <version>5.2.3.RELEASE</version>
         </dependency>
 
         <!-- 验证码依赖的jar包 -->
